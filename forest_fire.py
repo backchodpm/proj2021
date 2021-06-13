@@ -26,6 +26,7 @@ X = np.array(X)
 X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.1, random_state=20)
 log_reg = LogisticRegression()
 log_reg.fit(X_train, Y_train)
-
+inputt=[int(x) for x in "0 0 0 0".split(' ')]
+final=[np.array(inputt)]
 pickle.dump(log_reg,open('model.pkl','wb'))
 model=pickle.load(open('model.pkl','rb'))
